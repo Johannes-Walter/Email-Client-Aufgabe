@@ -59,5 +59,3 @@ with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
 
 
 print("Fertig!")
-
-
