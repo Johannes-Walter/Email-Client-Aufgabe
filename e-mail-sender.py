@@ -61,8 +61,8 @@ html = MIMEText(
     "html"
 )
 
-msg.attach(text)
 msg.attach(html)
+msg.attach(text)
 
 
 # Anhang anhängen
