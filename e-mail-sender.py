@@ -1,10 +1,15 @@
 import smtplib, ssl
+import getpass
 
 
 
 port = 465
 sender_mail = "email.sender489@gmail.com"
-password = "K^X7KroA9R%2nx%"
+
+
+
+password = getpass.getpass("Bitte Passwort eingeben:")
+# K^X7KroA9R%2nx%
 
 reciver_mail = "jo.walter97@gmx.de"
 
