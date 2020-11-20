@@ -29,7 +29,41 @@ msg["To"] = reciver_mail
 msg["Subject"] = "Hallo Welt!"
 
 # Nachrichtentext einfügen
-msg.attach(MIMEText("Bitte Anhang lesen.", "plain"))
+text = MIMEText(
+    """Hallo, 
+    Diese E-Mail wurde automatisch versand und beinhaltet keine sinnvollen Informationen.
+    Sie ist nicht weiter zu beachten und Tschüss.
+
+    Mit freundlichen Grüßen
+    COMPUTER""",
+    "plain"
+)
+
+html = MIMEText(
+    """
+    <html>
+        <body>
+            <h1>
+                Geheime Informationen
+            </h1>
+            <h2>
+                Streng Geheim
+            </h2>
+            <h3>
+                Auf keinem Fall an dritte weitergeben!
+            </h3>
+            <p>
+                Wer das liest ist doof.
+            </p>
+        </body>
+    </html>
+    """,
+    "html"
+)
+
+msg.attach(text)
+msg.attach(html)
+
 
 # Anhang anhängen
 filename = "Anhang.txt"
